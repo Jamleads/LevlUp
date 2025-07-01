@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Credit Restoration Pros - Build Strong Credit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/logo.png
+    "
+      type="image/x-icon"
+    />
+    <!-- emailjs -->
+    <head>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+        defer
+      ></script>
+    </head>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Header Styles */
+      header {
+        color: #001499;
+        background: #fff;
+        padding: 1rem 0;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+
+      header.scrolled {
+        background: #fff;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 20, 153, 0.3);
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .logo {
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .logo img {
+        width: 60%;
+      }
+      @media (max-width: 488px) {
+        .logo {
+          width: 30%;
+        }
+        .logo img {
+          width: 100%;
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: #001499;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #29c4a9;
+      }
+
+      .mobile-toggle {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .mobile-toggle span {
+        width: 25px;
+        height: 3px;
+        background: white;
+        margin: 3px 0;
+        transition: 0.3s;
+      }
+
+      /* Hero Section */
+      /* .hero {
+        background: linear-gradient(135deg, #001499 0%, #00149938 100%);
+        color: white;
+        padding: 150px 0 100px;
+        text-align: center;
+      }
+
+      .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      .cta-button {
+        background: #29c4a9;
+        color: white;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .cta-button:hover {
+        background: #22a691;
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(41, 196, 169, 0.3);
+      } */
+
+      .hero {
+        background: linear-gradient(
+            135deg,
+            /* rgba(0, 20, 153, 0.75) 0%, */ /* rgba(0, 20, 153, 0.45) 50%, */
+              rgba(41, 196, 169, 0.25) 100%
+          ),
+          url("./assets/bgccover.png") no-repeat center center;
+        background-size: cover;
+        color: white;
+        padding: 120px 0;
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+          135deg,
+          rgba(0, 20, 153, 0.7) 0%,
+          rgba(0, 20, 153, 0.4) 50%,
+          rgba(41, 196, 169, 0.2) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-text {
+        text-align: left;
+      }
+
+      .hero-text h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        line-height: 1.2;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-text p {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        opacity: 0.95;
+        line-height: 1.6;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        filter: brightness(1.1) contrast(1.05);
+      }
+
+      .cta-button {
+        background: linear-gradient(135deg, #29c4a9 0%, #22a691 100%);
+        color: white;
+        padding: 18px 45px;
+        border: none;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        text-shadow: none;
+        box-shadow: 0 8px 25px rgba(41, 196, 169, 0.3);
+      }
+
+      .cta-button:hover {
+        background: linear-gradient(135deg, #22a691 0%, #1e9581 100%);
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(41, 196, 169, 0.4);
+      }
+
+      .credit-highlight {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 2rem;
+        margin-top: 2rem;
+      }
+
+      .credit-highlight h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        color: #29c4a9;
+      }
+
+      .credit-highlight p {
+        font-size: 1rem;
+        margin-bottom: 0;
+        opacity: 0.9;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 968px) {
+        .hero-content {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 2rem;
+        }
+
+        .hero-text {
+          text-align: center;
+        }
+
+        .hero-text h1 {
+          font-size: 2.5rem;
+        }
+
+        .hero-text p {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          padding: 80px 0;
+          min-height: 90vh;
+        }
+
+        .hero-text h1 {
+          font-size: 2rem;
+        }
+
+        .hero-text p {
+          font-size: 1rem;
+        }
+
+        .cta-button {
+          padding: 15px 35px;
+          font-size: 1.1rem;
+        }
+
+        .credit-highlight {
+          padding: 1.5rem;
+        }
+      }
+
+      /* About Section */
+      .about-section {
+        background: #00149938;
+      }
+
+      .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+        align-items: center;
+      }
+
+      .about-text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+
+      .about-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .about-text strong {
+        color: #001499;
+        font-weight: 600;
+      }
+
+      .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-placeholder {
+        width: 300px;
+        height: 250px;
+        background: white;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .image-placeholder:hover {
+        transform: translateY(-5px);
+      }
+
+      .placeholder-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+
+      .image-placeholder p {
+        font-weight: 600;
+        color: #001499;
+        font-size: 1.2rem;
+      }
+
+      /* Features Section */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 20, 153, 0.15);
+        border-color: #29c4a9;
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #001499;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Proven Results Section */
+      .proven-results-section {
+        background: linear-gradient(135deg, #001499 0%, #00149938 100%);
+        color: white;
+      }
+
+      .proven-results-section .section-title {
+        color: white;
+      }
+
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin: 3rem 0;
+      }
+
+      .result-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 2.5rem;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .result-card:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-5px);
+      }
+
+      .result-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .result-text {
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+
+      .results-cta {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      .results-cta p {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+      }
+
+      /* Process Section */
+      .process-section {
+        background: #f8f9fa;
+      }
+
+      .process-timeline {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .process-step {
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        gap: 2rem;
+        align-items: center;
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .process-step:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 20, 153, 0.15);
+      }
+
+      .process-step:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 2rem;
+        background: linear-gradient(to bottom, #29c4a9, transparent);
+      }
+
+      .step-number {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, #001499, #29c4a9);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .step-icon {
+        font-size: 2.5rem;
+      }
+
+      .step-content h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #001499;
+        margin-bottom: 0.5rem;
+      }
+
+      .step-content p {
+        color: #666;
+        line-height: 1.6;
+      }
+
+      /* Business Info Section */
+      .business-info-section {
+        background: #00149938;
+      }
+
+      .business-info-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .info-card {
+        background: white;
+        padding: 2.5rem;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 20, 153, 0.15);
+      }
+
+      .info-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      .info-card h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #001499;
+        margin-bottom: 1rem;
+      }
+
+      .info-card p {
+        color: #666;
+        font-weight: 500;
+      }
+
+      /* Section Styles */
+      .section {
+        padding: 80px 0;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #001499;
+        margin-bottom: 3rem;
+      }
+
+      /* Packages Section */
+      .packages-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .package-card {
+        background: white;
+        border-radius: 20px;
+        padding: 2.5rem;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      }
+
+      .package-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 60px rgba(0, 20, 153, 0.15);
+        border-color: #29c4a9;
+      }
+
+      .package-card.featured {
+        border-color: #001499;
+        background: linear-gradient(135deg, #001499 0%, #00149938 100%);
+        color: white;
+      }
+
+      .package-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #001499;
+      }
+
+      .featured .package-title {
+        color: white;
+      }
+
+      .package-price {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #29c4a9;
+        margin-bottom: 1rem;
+      }
+
+      .package-description {
+        margin-bottom: 1.5rem;
+        opacity: 0.8;
+      }
+
+      .package-features {
+        list-style: none;
+        margin-bottom: 1.5rem;
+      }
+
+      .package-features li {
+        padding: 0.5rem 0;
+        padding-left: 1.5rem;
+        position: relative;
+      }
+
+      .package-features li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #29c4a9;
+        font-weight: bold;
+      }
+
+      .package-notes {
+        font-size: 0.9rem;
+        opacity: 0.7;
+        border-top: 1px solid rgba(0, 20, 153, 0.1);
+        padding-top: 1rem;
+        margin-top: 1rem;
+      }
+
+      .featured .package-notes {
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      /* Reviews Section */
+      .reviews-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .review-card {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 20, 153, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .review-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .no-reviews {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        grid-column: 1 / -1;
+        padding: 3rem;
+      }
+
+      /* Contact Section */
+      .contact {
+        background: #f8f9fa;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 20, 153, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #001499;
+      }
+
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 15px;
+        border: 2px solid #e9ecef;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #29c4a9;
+      }
+
+      .form-group textarea {
+        height: 120px;
+        resize: vertical;
+      }
+
+      .success-message {
+        background: #d4edda;
+        color: #155724;
+        padding: 1rem;
+        border-radius: 10px;
+        margin-bottom: 1rem;
+        display: none;
+      }
+
+      /* Footer */
+      footer {
+        background: #001499;
+        color: white;
+        padding: 3rem 0 1rem;
+        text-align: center;
+      }
+
+      .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: #29c4a9;
+      }
+
+      .copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 1rem;
+        opacity: 0.7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 968px) {
+        .about-content {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+          text-align: center;
+        }
+
+        .process-step {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .step-number {
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .nav-links {
+          position: fixed;
+          top: 70px;
+          left: -100%;
+          width: 100%;
+          height: calc(100vh - 70px);
+          background: #001499;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          padding-top: 2rem;
+          transition: left 0.3s ease;
+        }
+
+        .nav-links.active {
+          left: 0;
+        }
+
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .packages-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .package-card {
+          padding: 2rem;
+        }
+
+        .results-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .business-info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .contact-form {
+          padding: 2rem;
+          margin: 0 1rem;
+        }
+
+        .image-placeholder {
+          width: 250px;
+          height: 200px;
+        }
+
+        .feature-card,
+        .result-card,
+        .info-card {
+          padding: 2rem;
+        }
+
+        .process-step {
+          padding: 2rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 2rem;
+        }
+
+        .section-title {
+          font-size: 2rem;
+        }
+
+        .package-card {
+          padding: 1.5rem;
+        }
+
+        .feature-card,
+        .result-card,
+        .info-card,
+        .process-step {
+          padding: 1.5rem;
+        }
+
+        .image-placeholder {
+          width: 200px;
+          height: 150px;
+        }
+
+        .placeholder-icon {
+          font-size: 3rem;
+        }
+
+        .image-placeholder p {
+          font-size: 1rem;
+        }
+      }
+
+      /* overlay css  */
+      .loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .spinner {
+        border: 6px solid #f3f3f3;
+        border-top: 6px solid #3498db;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        animation: spin 0.8s linear infinite;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .submit-error {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <nav>
+        <div class="logo"><img src="./assets/logo.png" alt="" /></div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-toggle" id="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- <section class="hero">
+        <div class="hero-content">
+          <h1>Build Strong Credit. Unlock New Possibilities.</h1>
+          <p>
+            Professional credit restoration services to help you achieve your
+            financial goals
+          </p>
+          <a href="#packages" class="cta-button">Get Started</a>
+        </div>
+      </section> -->
+
+      <section class="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Build Strong Credit. Unlock New Possibilities.</h1>
+            <p>
+              Professional credit restoration services to help you achieve your
+              financial goals and secure your financial future.
+            </p>
+            <a href="#packages" class="cta-button">Get Started Today</a>
+
+            <div class="credit-highlight">
+              <h3>🎯 Your Credit Success Story Starts Here</h3>
+              <p>
+                Join thousands who've improved their credit scores and unlocked
+                better financial opportunities.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <!-- The background image will show through here, creating a nice layered effect -->
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about-section">
+        <div class="container">
+          <h2 class="section-title">Who We Are</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>
+                At <strong>LvlUp Solutions LLC</strong>, we specialize in
+                helping individuals and entrepreneurs overcome credit challenges
+                so they can unlock new financial opportunities.
+              </p>
+              <p>
+                Our mission is to educate, equip, and empower our clients to
+                take control of their credit and financial futures. We believe
+                that credit repair should be straightforward, personalized, and
+                effective — with a team that truly cares about your success.
+              </p>
+            </div>
+            <div class="about-image">
+              <div class="image-placeholder">
+                <div class="placeholder-icon">🏢</div>
+                <p>LvlUp Solutions LLC</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-choose" class="section">
+        <div class="container">
+          <h2 class="section-title">Why Choose LvlUp Solutions?</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">✅</div>
+              <h3>Personalized Plans</h3>
+              <p>
+                Every client receives a custom credit improvement plan tailored
+                to their needs.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h3>Expert Guidance</h3>
+              <p>
+                Our team of certified credit professionals walks with you every
+                step of the way.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🔒</div>
+              <h3>Secure Client Portal</h3>
+              <p>24/7 access to your progress via our secure online portal.</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📨</div>
+              <h3>Transparent Support</h3>
+              <p>
+                We're just a call or email away, with real people ready to help.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+              <h3>Score Monitoring</h3>
+              <p>
+                Track your credit progress in real-time with our monthly score
+                tracking tools.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌟</div>
+              <h3>Satisfaction Guaranteed</h3>
+              <p>We're confident in our process and stand by our results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="packages" class="section">
+        <div class="container">
+          <h2 class="section-title">Our Packages</h2>
+          <div class="packages-grid">
+            <div class="package-card">
+              <h3 class="package-title">💼 Starter Boost</h3>
+              <div class="package-price">$599</div>
+              <p class="package-description">
+                Perfect for clients with minor credit challenges who want a
+                strong professional start.
+              </p>
+              <h4 style="margin-bottom: 1rem; color: #001499">Includes:</h4>
+              <ul class="package-features">
+                <li>Personalized Credit Plan</li>
+                <li>Live Credit Consultation</li>
+                <li>Disputes to All 3 Bureaus</li>
+                <li>Up to 2 Creditor Intervention Letters</li>
+                <li>24/7 Access to Online Client Portal</li>
+                <li>Monthly Score Tracking</li>
+                <li>Email & Phone Support</li>
+                <li>Satisfaction Guarantee</li>
+              </ul>
+              <div class="package-notes">
+                📌 Credit monitoring required<br />
+                💳 Split Option: 2 payments of $314.50 (includes $30 split fee)
+              </div>
+            </div>
+
+            <div class="package-card featured">
+              <h3 class="package-title">🚀 Level Up Growth</h3>
+              <div class="package-price">$799</div>
+              <p class="package-description">
+                Great for clients with moderate credit issues needing
+                comprehensive repair support.
+              </p>
+              <h4 style="margin-bottom: 1rem">Includes:</h4>
+              <ul class="package-features">
+                <li>Personalized Credit Plan</li>
+                <li>Live Credit Consultation</li>
+                <li>Disputes to All 3 Bureaus</li>
+                <li>Up to 6 Creditor Intervention Letters</li>
+                <li>24/7 Access to Online Client Portal</li>
+                <li>Monthly Score Tracking</li>
+                <li>Email & Phone Support</li>
+                <li>Satisfaction Guarantee</li>
+              </ul>
+              <div class="package-notes">
+                📌 Credit monitoring required<br />
+                💳 Split Option: 2 payments of $414.50 (includes $30 split fee)
+              </div>
+            </div>
+
+            <div class="package-card">
+              <h3 class="package-title">👑 Business Credit Builder</h3>
+              <div class="package-price">$999</div>
+              <p class="package-description">
+                Designed for those with advanced credit needs or looking to
+                transition into business credit building.
+              </p>
+              <h4 style="margin-bottom: 1rem; color: #001499">Includes:</h4>
+              <ul class="package-features">
+                <li>Personalized Credit Plan</li>
+                <li>Live Credit Consultation</li>
+                <li>Disputes to All 3 Bureaus</li>
+                <li>Up to 10 Creditor Intervention Letters</li>
+                <li>24/7 Access to Online Client Portal</li>
+                <li>Monthly Score Tracking</li>
+                <li>Email & Phone Support</li>
+                <li>Satisfaction Guarantee</li>
+              </ul>
+              <div class="package-notes">
+                📌 Credit monitoring required<br />
+                💳 Split Option: 2 payments of $514.50 (includes $30 split fee)
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="proven-results" class="section proven-results-section">
+        <div class="container">
+          <h2 class="section-title">Proven Results</h2>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-icon">📈</div>
+              <div class="result-text">
+                "I gained 112 points in just 3 months!"
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">✨</div>
+              <div class="result-text">
+                "I removed 5 negative items thanks to LvlUp."
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">🚗</div>
+              <div class="result-text">
+                "Got approved for my first car loan after using their service!"
+              </div>
+            </div>
+          </div>
+          <div class="results-cta">
+            <p>
+              <strong>Real people. Real results. You could be next.</strong>
+            </p>
+            <a href="#contact" class="cta-button">Start Your Journey</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section process-section">
+        <div class="container">
+          <h2 class="section-title">How Our Credit Repair Process Works</h2>
+          <div class="process-timeline">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-icon">📞</div>
+              <div class="step-content">
+                <h3>Initial Consultation</h3>
+                <p>Discuss your goals and review your credit report.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-icon">📝</div>
+              <div class="step-content">
+                <h3>Custom Strategy</h3>
+                <p>We build a strategy tailored to your situation.</p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-icon">📤</div>
+              <div class="step-content">
+                <h3>Dispute Process</h3>
+                <p>
+                  We file disputes with credit bureaus and creditors on your
+                  behalf.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-icon">🕵️</div>
+              <div class="step-content">
+                <h3>Monitor & Adjust</h3>
+                <p>
+                  You'll track your progress, and we adjust our approach as
+                  needed.
+                </p>
+              </div>
+            </div>
+            <div class="process-step">
+              <div class="step-number">5</div>
+              <div class="step-icon">🎉</div>
+              <div class="step-content">
+                <h3>Results & Growth</h3>
+                <p>
+                  Watch your score improve — and unlock new financial
+                  opportunities!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section">
+        <div class="container">
+          <h2 class="section-title">Client Reviews</h2>
+          <div class="reviews-grid" id="reviews-grid">
+            <div class="no-reviews">
+              No reviews uploaded yet. Check back soon!
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- overlay -->
+      <div id="loading-overlay" class="loading-overlay" style="display: none">
+        <div class="spinner"></div>
+      </div>
+
+      <section id="contact" class="section contact">
+        <div class="container">
+          <h2 class="section-title">Get In Touch</h2>
+          <form class="contact-form" id="contact-form">
+            <div class="success-message" id="success-message">
+              Thank you! Your message has been sent. We'll get back to you soon.
+            </div>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="tel">Phone</label>
+              <input type="tel" id="tel" name="tel" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <p class="submit-error" id="submit-error" style="color: red">
+              Error sumbitting mesage: try again later
+            </p>
+            <button type="button" class="cta-button" id="cta-button">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
+      <section id="business-info" class="section business-info-section">
+        <div class="container">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="business-info-grid">
+            <div class="info-card">
+              <div class="info-icon">🕒</div>
+              <h3>Business Hours</h3>
+              <p>Monday – Friday: 9am to 5pm EST</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <h3>Address</h3>
+              <p>5900 Balcones Drive</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <h3>Email</h3>
+              <p>info@lvlupsolutionsllc.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <h3>LvlUp Solutions LLC</h3>
+        <div class="social-links">
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Twitter">🐦</a>
+          <a href="#" title="LinkedIn">💼</a>
+          <a href="#" title="Instagram">📷</a>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 LvlUp Solutions LLC. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize EmailJS
+      emailjs.init("QbzUbABJUOUZF5NmN"); // real
+
+      // // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("header");
+        if (window.scrollY > 100) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      });
+
+      // Mobile navigation toggle
+      const mobileToggle = document.getElementById("mobile-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      mobileToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+
+      // Close mobile menu when clicking on a link
+      navLinks.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          navLinks.classList.remove("active");
+        }
+      });
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            const headerHeight = document.getElementById("header").offsetHeight;
+            const targetPosition = target.offsetTop - headerHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Load and display reviews
+      // function loadReviews() {
+      //   const reviewsGrid = document.getElementById("reviews-grid");
+      //   const reviews = JSON.parse(
+      //     localStorage.getItem("reviewImages") || "[]"
+      //   );
+
+      //   if (reviews.length === 0) {
+      //     reviewsGrid.innerHTML =
+      //       '<div class="no-reviews">No reviews uploaded yet. Check back soon!</div>';
+      //     return;
+      //   }
+
+      //   reviewsGrid.innerHTML = reviews
+      //     .map(
+      //       (review) => `
+      //         <div class="review-card">
+      //             <img src="${review.data}" alt="Customer Review" class="review-image">
+      //         </div>
+      //     `
+      //     )
+      //     .join("");
+      // }
+
+      // \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ selection
+      const formTrigger = document.getElementById("cta-button");
+      const loadingOverlay = document.getElementById("loading-overlay");
+      const submitError = document.getElementById("submit-error");
+
+      formTrigger.addEventListener("click", (e) => {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const tel = document.getElementById("tel").value;
+        const message = document.getElementById("message").value;
+
+        const templateParams = {
+          to_name: name,
+          to_email: email,
+          tel: tel,
+          message: message,
+        };
+
+        loadingOverlay.style.display = "flex";
+
+        // Send visitor confirmation email
+        emailjs
+          .send("service_vtjgdpe", "template_m5qvi9k", templateParams)
+          .then(
+            function (response) {
+              console.log("Visitor email sent successfully!", response);
+              name.value = "";
+              email.value = "";
+              message.value = "";
+            },
+            function (error) {
+              console.log("Failed to send visitor email...", error);
+              loadingOverlay.style.display = "none";
+              submitError.style.display = "flex";
+            }
+          );
+
+        emailjs
+          .send("service_vtjgdpe", "template_9p6dx7p", templateParams)
+          .then(
+            function (response) {
+              document.getElementById("success-message").style.display =
+                "block";
+
+              loadingOverlay.style.display = "none";
+            },
+            function (error) {
+              console.log("Failed to send admin email...", error);
+            }
+          );
+        // Show success message and reset form
+        setTimeout(() => {
+          document.getElementById("success-message").style.display = "none";
+        }, 5000);
+      });
+    });
+    // Load reviews on page load
+    // loadReviews();
+  </script>
+</html>
